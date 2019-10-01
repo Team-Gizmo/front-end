@@ -1,0 +1,15 @@
+<div style="width: 100%; text-align: center">
+  <ag-grid-angular #agGrid style="width: 1500px; height: 600px" align="left" class="ag-fresh"
+                   [gridOptions]="gridOptions"
+                   [columnDefs]="columnDefs"
+                   [showToolPanel]="showToolPanel"
+                   [rowData]="rowData"
+                   enableColResize
+                   enableSorting
+                   enableFilter
+                   rowHeight="22"
+                   (modelUpdated)="onModelUpdated()"
+                   (cellClicked)="onCellClicked($event)"
+                   (cellDoubleClicked)="onCellDoubleClicked($event)">
+  </ag-grid-angular>
+</div>

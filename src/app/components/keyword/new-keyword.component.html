@@ -1,0 +1,13 @@
+<h3><i>Add new Keyword</i></h3>
+
+<form [formGroup]="keywordForm" novalidate (ngSubmit)="onSubmit(myForm)">
+  <div class="form-group">
+    <label class="center-block">Name:
+      <input class="form-control" formControlName="name">
+    </label>
+  </div>
+  <br>
+  <button type="submit" md-raised-button color="primary" [disabled]="!keywordForm.valid">Submit</button>
+</form>
+
+<!-- <p>Form values: {{ keywordForm.value | json}}</p> -->

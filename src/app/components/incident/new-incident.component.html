@@ -1,0 +1,31 @@
+<h3><i>Add new Incident</i></h3>
+
+<form [formGroup]="incidentForm" novalidate (ngSubmit)="onSubmit(myForm)">
+  <div class="form-group">
+    <label class="center-block">Name:
+      <input class="form-control" formControlName="name">
+    </label>
+  </div>
+  <br>
+  <div class="form-group">
+    <label class="center-block">Description:
+      <input class="form-control" formControlName="description">
+    </label>
+  </div>
+  <br>
+  <div class="form-group">
+    <label class="center-block">Keywords:
+      <ss-multiselect-dropdown [options]="myOptions" [texts]="myTexts" [settings]="mySettings" formControlName="keywords"></ss-multiselect-dropdown>
+    </label>
+  </div>
+  <br>
+  <div class="form-group">
+    <label class="center-block">Solution:
+      <input class="form-control" formControlName="solution">
+    </label>
+  </div>
+  <br>
+  <button type="submit" md-raised-button color="primary" [disabled]="!incidentForm.valid">Submit</button>
+</form>
+
+<!-- <p>Form values: {{ incidentForm.value | json}}</p> -->

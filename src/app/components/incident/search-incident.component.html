@@ -1,0 +1,25 @@
+<h3><i>Search for Incidents by Keyword(s)</i></h3>
+
+<form [formGroup]="incidentForm" novalidate (ngSubmit)="onSubmit(myForm)">
+  <div class="form-group">
+    <label class="center-block">Keywords:
+      <ss-multiselect-dropdown [options]="myOptions" [texts]="myTexts" [settings]="mySettings" formControlName="keywords"></ss-multiselect-dropdown>
+    </label>
+  </div>
+  <br>
+  <button type="submit" md-raised-button color="primary" [disabled]="!incidentForm.valid">Submit</button>
+  <button type="button" [disabled]="incidentForm.pristine" (click)="resetForm()">Reset row data</button>
+</form>
+<br><br><br>
+<div style="width: 100%; text-align: center">
+  <ag-grid-angular #agGrid style="width: 1500px; height: 200px" align="left" class="ag-fresh"
+                   [gridOptions]="gridOptions"
+                   [columnDefs]="columnDefs"
+                   [showToolPanel]="showToolPanel"
+                   [rowData]="rowData"
+                   enableColResize
+                   enableSorting
+                   enableFilter
+                   rowHeight="22">
+  </ag-grid-angular>
+</div>
