@@ -8,8 +8,6 @@ import { NewIncidentComponent } from './components/incident/new-incident.compone
 import { NewKeywordComponent } from './components/keyword/new-keyword.component';
 import { SearchIncidentComponent } from './components/incident/search-incident.component';
 import {IncidentKeywordGridComponent} from "./components/incident/incident-keyword.component";
-import {LoginComponent} from "./components/login/login.component";
-import {RegisterComponent} from "./components/register/register.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -19,9 +17,7 @@ const routes: Routes = [
   { path: 'incident',   component: NewIncidentComponent },
   { path: 'search',     component: SearchIncidentComponent },
   { path: 'keyword',    component: NewKeywordComponent },
-  { path: 'incidentKeyword',    component: IncidentKeywordGridComponent },
-  { path: 'login',    component: LoginComponent },
-  { path: 'register',    component: RegisterComponent }
+  { path: 'incidentKeyword',    component: IncidentKeywordGridComponent }
 ];
 
 @NgModule({
