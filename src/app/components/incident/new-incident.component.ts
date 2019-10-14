@@ -29,7 +29,7 @@ export class NewIncidentComponent implements OnChanges {
     enableSearch: true,
     checkedStyle: 'checkboxes',
     buttonClasses: 'btn btn-default',
-    selectionLimit: 3,
+    selectionLimit: 2,
     closeOnSelect: false,
     showCheckAll: false,
     showUncheckAll: false,
@@ -83,11 +83,11 @@ export class NewIncidentComponent implements OnChanges {
     }
     const keywordIdArray = this.incidentForm.value.keywords;
     if (keywordIdArray) {
-      if (keywordIdArray.length <= 3) {
+      if (keywordIdArray.length <= 2) {
         this.keywordPostArray = keywordIdArray;
       }
       else {
-        this.keywordPostArray = keywordIdArray.slice(0, 3);
+        this.keywordPostArray = keywordIdArray.slice(0, 2);
       }
     }
     const inc = {
